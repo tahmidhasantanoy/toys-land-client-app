@@ -27,13 +27,13 @@ const ShopByAge = () => {
           <div className="w-24 rounded-full">
             <img src={kid3} />
           </div>
-          <p className="text-white">5 to 7 years</p>
+          <p className="text-white">5 to 8 years</p>
         </div>
         <div className="avatar flex flex-col items-center p-1">
           <div className="w-24 rounded-full">
             <img src={kid4} />
           </div>
-          <p className="text-white">7 to 13 years</p>
+          <p className="text-white">8 to 13 years</p>
         </div>
         <div className="avatar flex flex-col items-center">
           <div className="w-24 rounded-full">

@@ -2,6 +2,7 @@ import React from "react";
 import Nogod from "../../../../public/imgaes/Footer/nagad-removebg-preview.png";
 import bkash from "../../../../public/imgaes/Footer/bkash-logo-FBB258B90F-seeklogo.com-removebg-preview.png";
 import Rocket from "../../../../public/imgaes/Footer/dutch-bangla-rocket-logo-B4D1CC458D-seeklogo.com.png";
+import Highlights from "../../Home/Highlights/Highlights";
 
 const Footer = () => {
   return (

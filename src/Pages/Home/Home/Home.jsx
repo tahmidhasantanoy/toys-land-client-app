@@ -3,10 +3,12 @@ import Banner1 from "../../../../public/imgaes/Banner/banner1.png";
 import Banner2 from "../../../../public/imgaes/Banner/Banner2.png";
 import Banner3 from "../../../../public/imgaes/Banner/Banner3.png";
 import ShopByAge from "../ShopByAge/ShopByAge";
+import Highlights from "../Highlights/Highlights";
 
 const Home = () => {
   return (
     <div className="bg-slate-800">
+
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full ">
           <img src={Banner1} className="w-full rounded my-0" />
@@ -43,6 +45,8 @@ const Home = () => {
         </div>
       </div>
       {/* Banner end  */}
+      <Highlights/>
+
       <ShopByAge/>
     </div>
   );
