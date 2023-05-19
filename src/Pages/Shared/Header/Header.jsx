@@ -5,7 +5,7 @@ import p1 from "../../../../public/imgaes/logo/p1.jpg";
 const Header = () => {
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-200 rounded-md px-5 .py-2">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,17 +58,26 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost rounded-full normal-case text-xl">
+          <a className="btn btn-ghost normal-case text-xl">
             <img className="w-36" src={logo} alt="" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <a >Home</a>
             </li>
             <li>
               <a>All Toys</a>
+            </li>
+            <li>
+              <a>Blog</a>
+            </li>
+            <li>
+              <a>My Toys</a>
+            </li>
+            <li>
+              <a>add Toys</a>
             </li>
             <li>
               <a>Blog</a>
@@ -101,7 +110,7 @@ const Header = () => {
           <a className="btn">Get started</a>
         </div> */}
         <div className="avatar navbar-end">
-          <div className="w-14 rounded-full">
+          <div className="w-12 rounded-full">
             <img title="name" src={p1} />
           </div>
         </div>
