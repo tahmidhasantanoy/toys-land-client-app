@@ -9,27 +9,27 @@ const ShopByAge = () => {
   return (
    <div className="py-12">
     <h3 className="text-white text-center font-bold text-4xl py-8">Shop By Age </h3>
-     <div className="grid grid-cols-2 md:grid-cols-5 ">
+     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ">
         
-        <div className="avatar flex flex-col items-center p-1">
+        <div className="avatar flex flex-col items-center p-1 mb-4">
           <div className="w-24 rounded-full">
             <img src={kid1} />
           </div>
           <p className="text-white">Birth to 24 Months</p>
         </div>
-        <div className="avatar flex flex-col items-center p-1">
+        <div className="avatar flex flex-col items-center p-1 mb-4">
           <div className="w-24 rounded-full">
             <img src={kid2} />
           </div>
           <p className="text-white">2 to 5 years</p>
         </div>
-        <div className="avatar flex flex-col items-center p-1">
+        <div className="avatar flex flex-col items-center p-1 mb-4">
           <div className="w-24 rounded-full">
             <img src={kid3} />
           </div>
           <p className="text-white">5 to 8 years</p>
         </div>
-        <div className="avatar flex flex-col items-center p-1">
+        <div className="avatar flex flex-col items-center p-1 mb-4">
           <div className="w-24 rounded-full">
             <img src={kid4} />
           </div>
