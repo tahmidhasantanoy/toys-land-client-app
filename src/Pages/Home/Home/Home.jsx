@@ -2,6 +2,7 @@ import React from "react";
 import Banner1 from "../../../../public/imgaes/Banner/banner1.png";
 import Banner2 from "../../../../public/imgaes/Banner/Banner2.png";
 import Banner3 from "../../../../public/imgaes/Banner/Banner3.png";
+import ShopByAge from "../ShopByAge/ShopByAge";
 
 const Home = () => {
   return (
@@ -41,6 +42,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Banner end  */}
+      <ShopByAge/>
     </div>
   );
 };
