@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from "react";
 
-const PrivateRoute = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const PrivateRoute = ({ children }) => {
+  const { user, loading } = useContext();
+  console.log(user, loading);
+
+  if (user) {
+    return children;
+  }
+  return <div></div>;
 };
 
 export default PrivateRoute;
