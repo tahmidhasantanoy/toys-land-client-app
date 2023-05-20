@@ -1,12 +1,28 @@
 import React from "react";
 
 const AddToys = () => {
+
+    const handleAddToys= event => {
+        event.preventDefault()
+        const form = event.target 
+        const name = form.name.value
+        const SellerName = form.sellerName.value
+        const email = form.email.value
+        const price = form.price.value
+        const subCategory = form.subCategory.value
+        const rating = form.rating.value
+        const quantity = form.quantity.value
+        const photoUrl = form.photoUrl.value
+        const description = form.description.value
+
+        console.log(name,SellerName,email,price,subCategory,rating,quantity,photoUrl,description);
+    }
   return (
     <div className="px-40 py-20">
       <h3 className="text-5xl text-center font-semibold text-slate-300 mb-12">
         Enter your products details information{" "}
       </h3>
-      <form>
+      <form onSubmit={handleAddToys}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
             <label
@@ -64,9 +80,9 @@ const AddToys = () => {
               Price
             </label>
             <input
-              type="tel"
+              type="number"
               //   id="phone"
-              name="phone"
+              name="price"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter the product price"
               //   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
@@ -81,7 +97,7 @@ const AddToys = () => {
               Sub Category
             </label>
             <input
-              type="url"
+              type="text"
               name="subCategory"
               //   id="website"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -130,7 +146,7 @@ const AddToys = () => {
             Picture Url
           </label>
           <input
-            type="password"
+            type="url"
             name="photoUrl"
             // id="password"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -146,7 +162,7 @@ const AddToys = () => {
             Description
           </label>
           <input
-            type="password"
+            type="text"
             name="description"
             // id="confirm_password"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
