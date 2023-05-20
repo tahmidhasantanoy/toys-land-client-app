@@ -13,7 +13,7 @@ const Footer = () => {
       .catch((err) => console.log(err.messsage));
   };
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content .grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+    <footer className="footer p-10 bg-base-300 text-base-content .grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
       <div>
         <span className="footer-title">Our payment services</span>
         <div className="flex">
