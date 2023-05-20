@@ -13,7 +13,7 @@ const Footer = () => {
       .catch((err) => console.log(err.messsage));
   };
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
+    <footer className="footer p-10 bg-base-200 text-base-content .grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
       <div>
         <span className="footer-title">Our payment services</span>
         <div className="flex">
@@ -26,7 +26,6 @@ const Footer = () => {
         <span className="footer-title">Our pages</span>
         <a className="link link-hover">Home page</a>
         <a className="link link-hover">All Toys</a>
-        {/* <a className="link link-hover">Jobs</a> */}
         <a className="link link-hover">Blog</a>
       </div>
       <div>
