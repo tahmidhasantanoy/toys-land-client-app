@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../Providers/AuthProvider";
 
@@ -7,9 +7,13 @@ const Login = () => {
   const { loginUser, loginWithGoogle } = useContext(AuthContext);
   const [err, setErr] = useState("");
   const [success, setSuccess] = useState("");
-  const [displayName,setDisplayName] = useState('')
+  const [displayName, setDisplayName] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  console.log(location);
 
-  console.log(displayName);
+  // console.log(displayName);
 
   const handleLoginSubmit = (event) => {
     setErr("");
@@ -26,6 +30,7 @@ const Login = () => {
         const user = res.user;
         console.log(user);
         setSuccess("Successfully logged in to Toys land");
+        navigate(from, { replace: true });
       })
       .catch((err) => setErr(err.message));
   };
@@ -35,7 +40,7 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
         console.log(user);
-        setDisplayName(user.displayName)
+        setDisplayName(user.displayName);
       })
       .catch((err) => console.log(err.message));
   };
