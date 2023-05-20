@@ -7,7 +7,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
-  console.log(user);
+  // console.log(user);
 
   const handleLogOut = () => {
     console.log("asci");
@@ -45,7 +45,7 @@ const Header = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/">All Toys</Link>
+                <Link to="/alltoys">All Toys</Link>
               </li>
               <li>
                 <Link to="/blogs">Blog</Link>
@@ -76,7 +76,7 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">All Toys</Link>
+              <Link to="/alltoys">All Toys</Link>
             </li>
             <li>
               <Link to="/blogs">Blog</Link>
@@ -100,7 +100,7 @@ const Header = () => {
             <>
               <div className="avatar navbar-end">
                 <div className="w-12 rounded-full">
-                  <img title="name" src={p1} />
+                  <img title={user.displayName} src={p1} />
                 </div>
               </div>
             </>
