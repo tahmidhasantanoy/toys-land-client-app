@@ -8,9 +8,8 @@ const Footer = () => {
   const { logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
-    console.log("asci");
     logOut()
-      .then( console.log("done"))
+      .then()
       .catch((err) => console.log(err.messsage));
   };
   return (
