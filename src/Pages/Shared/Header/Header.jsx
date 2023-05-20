@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../../public/imgaes/logo/web-logo.png";
 import p1 from "../../../../public/imgaes/logo/p1.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -77,7 +78,7 @@ const Header = () => {
               <a>My Toys</a>
             </li>
             <li>
-              <a>add Toys</a>
+              <Link to="/addtoys">add Toys</Link>
             </li>
             <li>
               <a>Blog</a>
