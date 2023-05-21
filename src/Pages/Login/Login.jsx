@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  console.log(location);
+  // console.log(location);
 
   // console.log(displayName);
 
@@ -39,7 +39,7 @@ const Login = () => {
     loginWithGoogle()
       .then((res) => {
         const user = res.user;
-        console.log(user);
+        // console.log(user);
         setDisplayName(user.displayName);
       })
       .catch((err) => console.log(err.message));
