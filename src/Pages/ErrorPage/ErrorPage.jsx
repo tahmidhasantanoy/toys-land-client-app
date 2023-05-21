@@ -14,7 +14,6 @@ const ErrorPage = () => {
               <span className="sr-only w-2/4">Error</span>
 
               <img src={ErrPic} alt="" />
-              {/* {status || 404} */}
             </div>
             <div>
               <p className="text-2xl  font-semibold md:text-3xl text-red-800 mb-8">

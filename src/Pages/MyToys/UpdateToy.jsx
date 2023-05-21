@@ -61,7 +61,6 @@ const UpdateToy = () => {
     };
 
     //add a toy data to db
-    // all-toys/:update_id
     fetch(`https://toys-land-server-sandy.vercel.app/all-toys/${_id}`, {
       method: "PUT",  //here
       headers: {

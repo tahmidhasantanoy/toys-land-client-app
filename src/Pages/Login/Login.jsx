@@ -12,9 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  // console.log(location);
 
-  // console.log(displayName);
 
   const handleLoginSubmit = (event) => {
     setErr("");
@@ -25,7 +23,6 @@ const Login = () => {
     const password = form.password.value;
     form.reset();
 
-    // console.log(email, password);
 
     loginUser(email, password)
       .then((res) => {
@@ -41,7 +38,6 @@ const Login = () => {
     loginWithGoogle()
       .then((res) => {
         const user = res.user;
-        // console.log(user);
         setDisplayName(user.displayName);
       })
       .catch((err) => console.log(err.message));

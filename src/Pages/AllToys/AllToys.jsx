@@ -5,9 +5,7 @@ import Title from "../../Title/Title";
 
 const AllToys = () => {
   const allToysData = useLoaderData();
-  // console.log(allToysData);
 
-  // const { sellerName, quantity, price, subCategory, photoUrl } = allToysData;
 
   return (
     <div>

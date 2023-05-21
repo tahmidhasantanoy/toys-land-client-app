@@ -26,7 +26,6 @@ const MyToys = () => {
         Swal.fire("Delete successfully!", "", "success");
         console.log(delete_id);
 
-        //Route isn't found 404
         fetch(`https://toys-land-server-sandy.vercel.app/all-toys/${delete_id}`, {
           method: "DELETE",
         })

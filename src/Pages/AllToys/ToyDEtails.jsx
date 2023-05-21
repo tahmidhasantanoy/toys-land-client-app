@@ -6,12 +6,11 @@ const ToyDEtails = ({ toy }) => {
   console.log(toy);
   const { _id,SellerName, quantity, price, subCategory, photoUrl } = toy;
   console.log(toy.sellerName);
-  console.log(photoUrl); //show here
+  console.log(photoUrl); 
 
   return (
     <tbody>
       <Title title={"all toys"}/>
-      {/* row 1 */}
       <tr>
         <td>
           <div className="flex items-center space-x-3">
