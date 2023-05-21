@@ -5,6 +5,7 @@ import Banner3 from "../../../../public/imgaes/Banner/Banner3.png";
 import ShopByAge from "../ShopByAge/ShopByAge";
 import Highlights from "../Highlights/Highlights";
 import WhyToysland from "../WhyToysland/WhyToysland";
+import ShopCategory from "../ShopCategory/ShopCategory";
 
 const Home = () => {
   return (
@@ -47,6 +48,7 @@ const Home = () => {
       </div>
       {/* Banner end  */}
       <Highlights/>
+      <ShopCategory/>
       <WhyToysland/>
       <ShopByAge/>
     </div>
