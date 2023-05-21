@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import Title from "../../Title/Title";
 
-const MyToyDetails = ({ toy,handleDelete }) => {
+const MyToyDetails = ({ toy, handleDelete }) => {
   console.log(toy);
 
   const { _id, SellerName, quantity, price, subCategory, photoUrl } = toy;
@@ -9,6 +11,7 @@ const MyToyDetails = ({ toy,handleDelete }) => {
   return (
     <>
       <tbody className="">
+      <Title title={"my toy"}/>
         {/* row 1 */}
         <tr>
           <th className="">
@@ -51,7 +54,9 @@ const MyToyDetails = ({ toy,handleDelete }) => {
           <td className="">{quantity}</td>
           <td>{subCategory}</td>
           <th>
-            <button className="btn btn-sm btn-ghost ">Update</button>
+            <Link to={`/updatetoy/${_id}`}>
+              <button className="btn btn-sm btn-info hover:text-white">Update</button>
+            </Link>
           </th>
         </tr>
       </tbody>

@@ -1,10 +1,12 @@
 import React from "react";
 import pinkCar from "../../../../public/imgaes/Highlights/pink-car.png";
 import sportsCar from "../../../../public/imgaes/Highlights/sports-car.png";
+import Title from "../../../Title/Title";
 
 const Highlights = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center py-12">
+      <Title title={"Home"}/>
       <div className="flex flex-col items-center p-5">
         <div className="card card-compact w-96 bg-base-100 shadow-2xl">
           <figure>

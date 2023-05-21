@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import Title from "../../Title/Title";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const Registration = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photoUrl = form.photoUrl.value;
+    form.reset();
 
     console.log(name, email, password, photoUrl);
 
@@ -30,6 +32,7 @@ const Registration = () => {
   };
   return (
     <div>
+      <Title title={"Register"}/>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

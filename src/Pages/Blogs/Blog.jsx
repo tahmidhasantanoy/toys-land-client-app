@@ -1,8 +1,10 @@
 import React from "react";
+import Title from "../../Title/Title";
 
 const Blog = () => {
   return (
     <div className="py-5">
+      <Title title={"blogs"}/>
         <h3 className="text-4xl text-info text-center">Questions & Answers</h3>
         <div className="px-40 py-12">
       <div className="collapse">

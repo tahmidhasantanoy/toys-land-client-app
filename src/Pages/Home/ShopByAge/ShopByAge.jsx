@@ -4,10 +4,12 @@ import kid2 from "../../../../public/imgaes/Shop By Age/kid2.jpg";
 import kid3 from "../../../../public/imgaes/Shop By Age/kid3.jpg";
 import kid4 from "../../../../public/imgaes/Shop By Age/kid4.jpg";
 import kid5 from "../../../../public/imgaes/Shop By Age/kid5.jfif";
+import Title from "../../../Title/Title";
 
 const ShopByAge = () => {
   return (
    <div className="py-12">
+    <Title title={"Home"}/>
     <h3 className="text-white text-center font-bold text-4xl py-8">Shop By Age </h3>
      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ">
         

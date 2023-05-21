@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../Providers/AuthProvider";
+import Title from "../../Title/Title";
 
 const Login = () => {
   const { loginUser, loginWithGoogle } = useContext(AuthContext);
@@ -22,6 +23,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    form.reset();
 
     // console.log(email, password);
 
@@ -47,6 +49,7 @@ const Login = () => {
 
   return (
     <div>
+      <Title title={"login"}/>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

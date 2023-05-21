@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Title from "../../Title/Title";
 
 const DetailsToy = () => {
   const oneToy = useLoaderData();
@@ -19,6 +20,7 @@ const DetailsToy = () => {
   console.log(oneToy);
   return (
     <div className="px-60 py-36 ">
+      <Title title={"all toy"}/>
       <div className="card card-side bg-base-300 shadow-2xl">
         <div className="flex flex-col md:flex-row">
           <div>

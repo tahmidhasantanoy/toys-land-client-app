@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Title from "../../Title/Title";
 
 const ToyDEtails = ({ toy }) => {
   console.log(toy);
@@ -9,6 +10,7 @@ const ToyDEtails = ({ toy }) => {
 
   return (
     <tbody>
+      <Title title={"all toys"}/>
       {/* row 1 */}
       <tr>
         <td>

@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoutes/PrivateRoute";
 import AllToys from "../Pages/AllToys/AllToys";
 import MyToys from "../Pages/MyToys/MyToys";
 import DetailsToy from "../Pages/AllToys/DetailsToy";
+import UpdateToy from "../Pages/MyToys/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -19,38 +20,66 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        title: "Home",
         element: <Home />,
       },
       {
         path: "/login",
+        title: "login",
         element: <Login />,
       },
       {
         path: "/registration",
+        title: "registration",
         element: <Registration />,
       },
       {
         path: "/addtoys",
-        element: <PrivateRoute><AddToys /></PrivateRoute>,
+        title: "addtoys",
+        element: (
+          <PrivateRoute>
+            <AddToys />
+          </PrivateRoute>
+        ),
       },
       {
-        path : "/alltoys",
-        element : <PrivateRoute><AllToys /></PrivateRoute>, //?? eta private
-        loader : () => fetch('http://localhost:5000/all-toys')
+        path: "/alltoys",
+        title: "alltoys",
+        element: (
+          <PrivateRoute>
+            <AllToys />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("https://toys-land-server-sandy.vercel.app/all-toys"),
       },
       {
-        path : "/detailstoy/:id",
-        element : <PrivateRoute><DetailsToy/></PrivateRoute>,
-        loader : ({params}) => fetch(`http://localhost:5000/all-toys/${params.id}`)
+        path: "/detailstoy/:id",
+        title: "toy Details",
+        element: (
+          <PrivateRoute>
+            <DetailsToy />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://toys-land-server-sandy.vercel.app/all-toys/${params.id}`),
       },
       {
-        path : '/mytoys',
-        element : <MyToys/>
+        path: "/mytoys",
+        title: "mytoys",
+        element: <MyToys />,
       },
       {
-        path : "/blogs",
-        element : <Blog/>
-      }
+        path: "/updatetoy/:id",
+        title: "updatetoy",
+        element: <UpdateToy />,
+        loader: ({ params }) =>
+          fetch(`https://toys-land-server-sandy.vercel.app/all-toys/${params.id}`),
+      },
+      {
+        path: "/blogs",
+        title: "blogs",
+        element: <Blog />,
+      },
     ],
   },
 ]);

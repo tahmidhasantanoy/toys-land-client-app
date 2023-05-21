@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import ToyDEtails from "./ToyDEtails";
+import Title from "../../Title/Title";
 
 const AllToys = () => {
   const allToysData = useLoaderData();
@@ -10,6 +11,7 @@ const AllToys = () => {
 
   return (
     <div>
+      <Title title={"all toys"}/>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}

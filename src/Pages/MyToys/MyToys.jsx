@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import MyToyDetails from "./MyToyDetails";
 import Swal from "sweetalert2";
+import Title from "../../Title/Title";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -10,7 +11,7 @@ const MyToys = () => {
   console.log(mytoy);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/all-toys?email=${user?.email}`)
+    fetch(`https://toys-land-server-sandy.vercel.app/all-toys?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMytoy(data))
       .catch((err) => console.log(err.message));
@@ -26,14 +27,14 @@ const MyToys = () => {
         console.log(delete_id);
 
         //Route isn't found 404
-        fetch(`http://localhost:5000/all-toys/${delete_id}`, {
+        fetch(`https://toys-land-server-sandy.vercel.app/all-toys/${delete_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
             const remaining = mytoy.filter((toy) => toy._id !== delete_id);
-            setMytoy(remaining)
+            setMytoy(remaining);
           })
           .catch((err) => console.log(err.message));
       }
@@ -42,16 +43,11 @@ const MyToys = () => {
 
   return (
     <div className="overflow-x-auto w-full p-12">
+      <Title title={"My toys"} />
       <table className="table w-full">
         {/* head */}
         <thead>
           <tr>
-            {/* <th>
-            <label>
-              <inp
-              t type="checkbox" className="checkbox" />
-            </label>
-          </th> */}
             <th>Delete toy</th>
             <th>Toy image & Seller name</th>
             <th>Toy price</th>

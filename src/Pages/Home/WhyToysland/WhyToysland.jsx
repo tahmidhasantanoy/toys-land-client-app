@@ -1,8 +1,10 @@
 import React from "react";
+import Title from "../../../Title/Title";
 
 const WhyToysland = () => {
   return (
     <div className="py-12">
+      <Title title={"Home"}/>
       <h3 className="text-white text-center font-bold text-4xl py-12">
       Why people find Toys Land awesome
       </h3>
