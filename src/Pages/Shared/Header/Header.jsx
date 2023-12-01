@@ -9,7 +9,6 @@ const Header = () => {
 
 
   const handleLogOut = () => {
-    console.log("asci");
     logOut()
       .then(console.log("done"))
       .catch((err) => console.log(err.messsage));
